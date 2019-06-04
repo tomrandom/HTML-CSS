@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container1 > section {
+    width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+    .grid-cont1-item1 {
+        grid-area: ladysection;
+    }
+    .grid-cont1-item2 {
+        grid-area: mapsection;
+    }
+    .grid-cont1-item3 {
+        grid-area: phonesection;
+    }
+    .grid-container1 {
+        /*position: absolute;*/
+        display: grid;
+        grid-template-areas: 'ladysection ladysection mapsection'
+        'ladysection ladysection phonesection';
+        grid-gap: 10px;
+        background-color: rgb(229, 229, 232);
+        padding: 10px;
+    }
+    .category {
+        position: absolute;
+        font-size: 1.2em;
+        font-weight: bold;
+        bottom: 40%;
+        left: 3%;
+    }
+    .description {
+        position: absolute;
+        bottom: 20%;
+        left: 3%;
+        font-size: 3em;
+        font-weight: bold;
+        color: rgb(144, 143, 145);
+    }
+    .first-nav {
+        background-color: black;
+        max-width: 100%;
+        padding-left: 20px;
+    }
+    .first-nav a {
+        text-decoration: none;
+        color: rgb(144, 143, 145);
+        font-size: 12px;
+        padding: 10px;
+        display: inline-block;
+    }
+    #nav-news {
+        color: white;
+    }
+    .first-nav ul {
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+    .first-nav ul li {
+        display: inline-block;
+    }
+    .first-nav a:hover {
+        color: white;
+    }
+    .first-nav ul li a:hover {
+        color: white;
+    }
+    .first-nav ul li:hover ul {
+        display: block;
+    }
+    .first-nav ul li ul {
+        position: absolute;
+        width: 200px;
+        display: none;
+        z-index: 1;
+    }
+    .first-nav ul li ul li {
+        background: black;
+        display: block;
+    }
+    .first-nav ul li ul li a {
+        display: block !important;
+    }
+    .first-nav ul li ul li:hover {
+        background: black;
+    }
+    .second-nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    .second-nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 20px;
+        overflow: hidden;
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        /*border: 1px solid black;*/
+    }
+    .second-nav ul li {
+        display: inline;
+    }
+    .second-nav ul li a {
+        color: rgb(172, 172, 175);
+        text-align: center;
+        padding: 0px 16px;
+        text-decoration: none;
+        font-family: Shentox;
+        font-size: 15px;
+        line-height: 50px;
+    }
+    .second-nav ul li a:hover {
+        color: black;
+    } 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .first-nav {
+        display: none;
+    }
+    .second-nav {
+        display: none;
+    }
+    .grid-cont1-item1 {
+        grid-area: ladysection;
+    }
+    .grid-cont1-item2 {
+        grid-area: mapsection;
+    }
+    .grid-cont1-item3 {
+        grid-area: phonesection;
+    }
+    .grid-container1 {
+        display: grid;
+        grid-template-areas: 'ladysection ladysection mapsection'
+        'ladysection ladysection phonesection';
+        grid-gap: 10px;
+        background-color: rgb(229, 229, 232);
+        padding: 10px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .first-nav {
+        display: none;
+    }
+    .second-nav {
+        display: none;
+    }
+    .grid-cont1-item1 {
+        grid-area: ladysection;
+        height: 150px;
+    }
+    .grid-cont1-item2 {
+        grid-area: mapsection;
+        height: 150px;
+    }
+    .grid-cont1-item3 {
+        grid-area: phonesection;
+        height: 150px;
+    }
+    .grid-container1 {
+        display: grid;
+        grid-template-areas: 'ladysection'
+        'mapsection'
+        'phonesection';
+        grid-gap: 10px;
+        background-color: rgb(229, 229, 232);
+        padding: 10px;
+    }
+
+}
+
+
+
