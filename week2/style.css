@@ -52,7 +52,7 @@ li {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .grid-item:nth-child(1) {
         grid-area: area;
-        max-width: 48.2%
+        max-width: 48.2%;
     }
     .grid-item:nth-child(2) {
         position: absolute;
